@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Success";
+    Layout = "~/Views/Shared/_General.cshtml";
+}
+<style>
+
+    .a {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .card {
+        margin-top: 60px;
+        height: 500px;
+        width: 300px;
+        box-shadow: 0px 0px 10px 10px rgba(5, 53, 53, .1), 0px 0px 30px 20px rgb(113, 108, 108,.3);
+        transform: translate(30px,30px);
+    }
+</style>
+<h2 class="a">&nbsp;Success<b class="h-color"> Story</b> <img src="~/Content/image/podium.png" style="height:40px; width:40px;" /></h2>
+<h6 class="text-center mt-3"> Here are few career transformation, to inspire you </h6>
+
+<div class="container-fluid">
+    <div class="row" style="height:700px;">
+
+        @{ if (ViewBag.placement != null)
+            {
+                foreach (var p in ViewBag.placement.Rows)
+                {
+
+
+
+                    <div class="col-sm-3">
+                        <div class="card" style="">
+                            <div class="row mt-3 mb-3">
+                                <div class="card-body text-center">
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background: #81B441;">
+                                        @p[7]LPA
+                                        <span class="visually-hidden">Unread messages</span>
+
+                                    </span>
+
+                                    <img src="~/Content/spic/@p[9]" style="height:80px; width:80px; border-radius:50%" />
+                                    <h5 class="card-title mt-4">@p[1]</h5>
+                                    <span style="font-size:12px;" class="card-subtitle mt-1 mb-2 text-muted post">(@p[5] - @p[6])</span>
+                                    <hr />
+                                    <h6 class="card-subtitle mt-1 mb-2 text-muted post">@p[2]</h6>
+                                    <h6 class="card-subtitle mt-4 company">@p[3]</h6>
+
+                                    <img src="~/Content/image/down-chevron.png" style="height:17px; width:17px; text-align:center; margin-bottom:15px; margin-top:13px;" />
+
+                                    <br />
+                                    <h6 class="card-text mb-3 text-muted field"><b>@p[4]</b></h6>
+                                    <p class="logo">
+                                        <img src="~/Content/logo/@p[8]" style="height:60px; width:60px;" />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+            }
+        }
+
+    </div>
+</div>

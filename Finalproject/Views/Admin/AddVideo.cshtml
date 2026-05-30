@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "AddVideo";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+<head>
+    <style>
+
+        .card {
+            box-shadow: 0px 0px 10px 10px rgba(5, 53, 53, .1), 0px 0px 30px 20px rgb(113, 108, 108,.3);
+        }
+    </style>
+</head>
+
+<div class="row">
+    <div class="col-sm-4 card" style="margin-left:40PX;">
+        <div class="card-body">
+            <h4 class="card-title text-center" style="color: #81B441">ADD VIDEO</h4>
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group mt-3 text-center">
+                    <label for="exampleInputEmail1"><b>CHOOSE BATCH</b></label>
+                    <select class="form-control mt-3" name="vbatch">
+                        <option value="0">SELECT BATCH</option>
+                        @foreach (var row in ViewBag.batches.Rows)
+                        {
+                            <option value="@row[0]">@row[1]</option>
+                        }
+
+
+                    </select>
+                </div>
+
+                <div class="form-group mt-3 text-center">
+                    <label for="exampleInputEmail1"><b>VIDEO CATEGORY</b></label>
+
+                    <select class="form-control mt-3" name="videocategory">
+                        <option value="0">SELECT VIDEO CATEGORY</option>
+                        @foreach (var row in ViewBag.cat.Rows)
+                        {
+                            <option value="@row[0]">@row[1]</option>
+                        }
+                        </select>
+                </div>
+
+
+                <div class="form-group mt-3 text-center">
+                    <label for="exampleInputEmail1"><b>VIDEO TITLE</b></label>
+                    <input type="text" name="videotitle" class="form-control" id="title" aria-describedby="Category" placeholder="Enter Title" />
+                </div>
+
+
+                <div class="form-group mt-3 text-center">
+                    <label for="exampleInputEmail1"><b>VIDEO DESCRIPTIONS</b></label>
+                    <textarea class="form-control" name="videodesc" aria-describedby="Category" style="height:80px;"></textarea>
+                </div>
+
+
+                <div class="form-group mt-3 text -center">
+                    <label for="exampleInputEmail1"><b>CHOOSE VIDEO (MP4 format)</b></label>
+                    <input type="file" name="videopic" accept="video/*" class="form-control" id="taskpic" aria-describedby="Category" />
+                </div>
+
+
+                <input class="btn btn-success mt-4" type="submit" style="background: #81B441; width:100%;" value="ADD NOW" />
+
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="col-sm-7  card text-center ms-5">
+
+
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>S No.</th>
+                        <th>Batch_Name</th>
+                        <th>V_Category</th>
+                        <th>V_Title</th>
+                        <th>V_Descripation</th>
+                        <th>Video</th>
+                        <th>Added on</th>
+                        <th>Action</th>
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    @{
+                        if (ViewBag.video != null)
+                        {
+                            foreach (var row in ViewBag.video.Rows)
+                            {
+
+                                <tr>
+                                    <td>@row[0]</td>
+                                    <td>@row[1]</td>
+                                    <td>@row[2]</td>
+                                    <td>@row[3]</td>
+                                    <td>@row[4]</td>
+
+
+
+
+                                    @*<td> <img src="~/Content/taskpic/@row[4]" style="height:50px; width:50px;" /></td>*@
+
+                                    @*<td><i class="fa fa-download"></i></td>*@
+                                    <td>@row[5]</td>
+                                    <td>@row[6]</td>
+                                    <td><i class="fa fa-trash text-success"></i></td>
+
+                                </tr>
+                            }
+                        }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+

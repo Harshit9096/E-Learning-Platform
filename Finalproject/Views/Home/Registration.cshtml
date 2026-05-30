@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_General.cshtml";
+}
+
+
+<style>
+    .a {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .card {
+        height:530px;
+        width:540px;
+        margin-top:90px;
+        margin-left:140px;
+        padding-top:7px;
+        padding-left:7px;
+        box-shadow: 0px 0px 10px 10px rgba(5, 53, 53, .1);
+    }
+
+</style>
+<h2 class="a">&nbsp;Registration<b class="h-color"> Form</b> <img src="~/Content/image/regis.png"  style="height:45px; width:45px;" /></h2>
+
+
+        <div class="container">
+            <div class="row" style="height:800px;">
+                <div class="col-sm-5">
+                    <img src="~/Content/image/registration.jpg"  style="height:700px;width:600px;"/>
+                </div>
+                <div class="col-sm-6 card">
+
+                    <form method="post">
+                        <div class="col-sm-6 mt-3 ms-3" style="width:500px;padding-bottom:5px; padding-right:14px;">
+
+
+                            <div class="input-group mb-3">
+                                <i class="input-group-text text-dark" style="background: #81B441"><i class="fa-solid fa-user"></i></i>
+                                <input type="text" required name="name" class="form-control" placeholder="Name of Student">
+                            </div>
+
+
+                            <div class="input-group mb-3">
+                                <i class="input-group-text  text-dark" style="background: #81B441"><i class="fa-solid fa-envelope"></i></i>
+                                <input type="email" required name="email" class="form-control" placeholder="Email">
+                            </div>
+
+
+                            <div class="input-group mb-3">
+                                <i class="input-group-text text-dark" style="background: #81B441"><i class="fa-solid fa-lock"></i></i>
+                                <input type="password" required name="password" class="form-control" placeholder="Password ">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <i class="input-group-text text-dark" style="background: #81B441"><i class="fa-solid fa-phone"></i></i>
+                                <input type="text" name="mobno" required class="form-control" placeholder="Mobile No">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <i class="input-group-text text-dark" style="background: #81B441"><i class="fa-solid fa-person-half-dress fs-4"></i></i>
+
+                                <input type="radio" name="gender" required value="male" style="height:17px; width:17px; margin-left:100px;margin-top:5px;" /> &nbsp; Male
+                                <input type="radio" name="gender" required value="female" style="height:17px; width:17px; margin-left:40px; margin-top:5px;" /> &nbsp; Female
+
+
+                            </div>
+
+
+                            <div class="input-group mb-3">
+                                <i class="input-group-text text-dark" style="background: #81B441"><i class="fa-solid fa-graduation-cap"></i></i>
+
+                                <input type="text" name="college" required class="form-control" placeholder="College Name">
+
+                            </div>
+
+
+
+                            <div class="input-group mb-3">
+                                <i class="input-group-text text-dark" style="background: #81B441"><i class="fas fa-list"></i></i>
+                                <select required="required" class="form-control" name="course">
+                                    <option>Select Course</option>
+                                    <option>B.Tech(C.S)</option>
+                                    <option>B.Tech(I.T)</option>
+                                    <option>Diploma(C.S)</option>
+                                    <option>Diploma(I.T)</option>
+                                    <option>PGDCA</option>
+                                    <option>BCA</option>
+                                    <option>B.Sc(I.T)</option>
+                                    <option>MCA</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3 text-center">
+                                <i class="input-group-text text-dark" style="background: #81B441"><i class="fas fa-list"></i></i>
+                                <select class="form-control" required name="rbatch">
+                                    <option value="0">SELECT BATCH</option>
+                                    @foreach (var row in ViewBag.batches.Rows)
+                                    {
+                                        <option value="@row[0]">@row[1]</option>
+                                    }
+
+
+                                </select>
+                            </div>
+
+
+
+
+                            <div class="pt-1 mb-4">
+                                <input type="submit" class="form-control mt-2" value="REGISTER NOW" style="background: #81B441" />
+                            </div>
+
+                        </div>
+
+                       
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+

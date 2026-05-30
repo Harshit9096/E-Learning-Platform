@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_General.cshtml";
+}
+
+<style>
+    .a {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .form-control {
+        width: 420px;
+        margin-left: 30px;
+    }
+
+    .card {
+        box-shadow: 0px 0px 10px 10px rgba(5, 53, 53, .1);
+    }
+</style>
+<h2 class="a">&nbsp;Log<b class="h-color">In</b> <img src="~/Content/image/login2.png" style="height:45px; width:45px;" /></h2>
+
+<div class="row" style="height:700px;">
+    <div class="col-sm-5 mb-5">
+        <img src="~/Content/image/login5.jpg" style="height:700px;width:650px; margin-left:10px; margin-bottom:40px;" />
+    </div>
+
+
+    <div class="col-sm-4  text-center" style="margin-top:150px; margin-left:120px;">
+        <form method="post">
+            <div class="card">
+                <div class="form-outline mb-3 mt-4 text-center">
+                   <b>EMAIL ID</b>
+                    <input type="email" required name="userid" placeholder="Enter your email" class="form-control mt-2" id="userid" />
+
+                </div>
+
+                <div class="form-outline mb-4 text-center">
+                    <b>PASSWORD</b>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" recquird class="form-control mt-2" />
+
+                </div>
+
+
+
+                <div class="pt-1 mb-5">
+                    <input type="submit" class="form-control mt-2" value="Login" style="background: #81B441" />
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+

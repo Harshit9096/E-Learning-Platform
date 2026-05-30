@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A708DDD-2450-4B70-941A-8DEE4B93694B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Finalproject</RootNamespace>
+    <AssemblyName>Finalproject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44351</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\all.css" />
+    <Content Include="Content\css\all.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\images\9.jpeg" />
+    <Content Include="Content\images\beauty.jpg" />
+    <Content Include="Content\images\beauty1.jpg" />
+    <Content Include="Content\images\beauty2.jpg" />
+    <Content Include="Content\images\beauty3.jpg" />
+    <Content Include="Content\images\beauty5.jpg" />
+    <Content Include="Content\images\code.jpeg" />
+    <Content Include="Content\images\code1.jpeg" />
+    <Content Include="Content\images\code2.jpeg" />
+    <Content Include="Content\images\default.jpeg" />
+    <Content Include="Content\images\dress.jpeg" />
+    <Content Include="Content\images\dress1.jpg" />
+    <Content Include="Content\images\dress2.jpeg" />
+    <Content Include="Content\images\eeye1.jpeg" />
+    <Content Include="Content\images\eye.jpg" />
+    <Content Include="Content\images\eye3.jpeg" />
+    <Content Include="Content\images\eye4.jpeg" />
+    <Content Include="Content\images\eye4.jpg" />
+    <Content Include="Content\images\eye5.jpeg" />
+    <Content Include="Content\images\eye7.png" />
+    <Content Include="Content\images\f.png" />
+    <Content Include="Content\images\f10.jpeg" />
+    <Content Include="Content\images\f11.jpeg" />
+    <Content Include="Content\images\f2.png" />
+    <Content Include="Content\images\f3.jpg" />
+    <Content Include="Content\images\f4.jpeg" />
+    <Content Include="Content\images\f5.jpg" />
+    <Content Include="Content\images\f6.jpeg" />
+    <Content Include="Content\images\f7.jpg" />
+    <Content Include="Content\images\f8.jpeg" />
+    <Content Include="Content\images\f9.jpeg" />
+    <Content Include="Content\images\faishon2.jpg" />
+    <Content Include="Content\images\fashion.jpeg" />
+    <Content Include="Content\images\fashion1.jpg" />
+    <Content Include="Content\images\fashion3.jpeg" />
+    <Content Include="Content\images\fashion4.jpeg" />
+    <Content Include="Content\images\fashion5.jpg" />
+    <Content Include="Content\images\flipkart.jpeg" />
+    <Content Include="Content\images\flipkart1.png" />
+    <Content Include="Content\images\g1.jpeg" />
+    <Content Include="Content\images\google.png" />
+    <Content Include="Content\images\google1.jpeg" />
+    <Content Include="Content\images\google2.png" />
+    <Content Include="Content\images\google3.jpeg" />
+    <Content Include="Content\images\google4.png" />
+    <Content Include="Content\images\gown.jpeg" />
+    <Content Include="Content\images\gown1.jpeg" />
+    <Content Include="Content\images\gown10.jpg" />
+    <Content Include="Content\images\gown11.jpeg" />
+    <Content Include="Content\images\gown12.jpeg" />
+    <Content Include="Content\images\gown13.jpeg" />
+    <Content Include="Content\images\gown4.jpeg" />
+    <Content Include="Content\images\gown5.jpg" />
+    <Content Include="Content\images\gown6.jpeg" />
+    <Content Include="Content\images\gown8.jpeg" />
+    <Content Include="Content\images\gown9.jpeg" />
+    <Content Include="Content\images\hair.jpeg" />
+    <Content Include="Content\images\hair1.jpg" />
+    <Content Include="Content\images\hair2.jpg" />
+    <Content Include="Content\images\hair5.jpg" />
+    <Content Include="Content\images\hair6.jpeg" />
+    <Content Include="Content\images\home.jpeg" />
+    <Content Include="Content\images\home2.jpeg" />
+    <Content Include="Content\images\home3.jpeg" />
+    <Content Include="Content\images\icon.png" />
+    <Content Include="Content\images\logo %281%29.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\OIP %281%29.jpeg" />
+    <Content Include="Content\images\OIP %282%29.jpeg" />
+    <Content Include="Content\images\OIP.jpeg" />
+    <Content Include="Content\images\product1.jpeg" />
+    <Content Include="Content\images\product10.jpg" />
+    <Content Include="Content\images\product2.jpeg" />
+    <Content Include="Content\images\product3.jpg" />
+    <Content Include="Content\images\product4.jpeg" />
+    <Content Include="Content\images\product6.jpg" />
+    <Content Include="Content\images\product8.jpeg" />
+    <Content Include="Content\images\product9.jpg" />
+    <Content Include="Content\images\R.jpeg" />
+    <Content Include="Content\images\slider1.jpg" />
+    <Content Include="Content\images\slider2.jpeg" />
+    <Content Include="Content\images\slider3.jpeg" />
+    <Content Include="Content\images\slider5.jpeg" />
+    <Content Include="Content\images\slier4.jpg" />
+    <Content Include="Content\images\tshirt.jpeg" />
+    <Content Include="Content\images\tshirt1.png" />
+    <Content Include="Content\images\tshirt2.jpeg" />
+    <Content Include="Content\images\tshirt5.jpeg" />
+    <Content Include="Content\image\.net1.jpeg" />
+    <Content Include="Content\image\1.jpg" />
+    <Content Include="Content\image\12.jpeg" />
+    <Content Include="Content\image\121.jpg" />
+    <Content Include="Content\image\about.png" />
+    <Content Include="Content\image\adminlog.jpg" />
+    <Content Include="Content\image\amazon-pay.png" />
+    <Content Include="Content\image\android.png" />
+    <Content Include="Content\image\android1.jpeg" />
+    <Content Include="Content\image\apple.png" />
+    <Content Include="Content\image\applicant.png" />
+    <Content Include="Content\image\batch.png" />
+    <Content Include="Content\image\batch1.jpeg" />
+    <Content Include="Content\image\bs.jpg" />
+    <Content Include="Content\image\c#.png" />
+    <Content Include="Content\image\C#1.jpeg" />
+    <Content Include="Content\image\c++.png" />
+    <Content Include="Content\image\c.png" />
+    <Content Include="Content\image\chat.png" />
+    <Content Include="Content\image\clipboard.png" />
+    <Content Include="Content\image\css.png" />
+    <Content Include="Content\image\d1.jpeg" />
+    <Content Include="Content\image\dbms.jpeg" />
+    <Content Include="Content\image\default.png" />
+    <Content Include="Content\image\down-chevron.png" />
+    <Content Include="Content\image\download-pdf.png" />
+    <Content Include="Content\image\download.jpeg" />
+    <Content Include="Content\image\download.png" />
+    <Content Include="Content\image\facebook.png" />
+    <Content Include="Content\image\faculty.png" />
+    <Content Include="Content\image\flipkart.png" />
+    <Content Include="Content\image\Python2.jpeg" />
+    <Content Include="Content\image\slider6.jpg" />
+    <Content Include="Content\image\google.png" />
+    <Content Include="Content\image\html.png" />
+    <Content Include="Content\image\human.png" />
+    <Content Include="Content\image\illustrator.png" />
+    <Content Include="Content\image\img3.jpg" />
+    <Content Include="Content\image\img2.jpg" />
+    <Content Include="Content\image\img1.jpg" />
+    <Content Include="Content\image\java.jpg" />
+    <Content Include="Content\image\js.jpg" />
+    <Content Include="Content\image\js1.jpg" />
+    <Content Include="Content\image\layout.png" />
+    <Content Include="Content\image\slider5.jpg" />
+    <Content Include="Content\image\linkedin.png" />
+    <Content Include="Content\image\login.jpg" />
+    <Content Include="Content\image\login.png" />
+    <Content Include="Content\image\login1.png" />
+    <Content Include="Content\image\login2.png" />
+    <Content Include="Content\image\login4.jpg" />
+    <Content Include="Content\image\login5.jpg" />
+    <Content Include="Content\image\me.jpg" />
+    <Content Include="Content\image\money.png" />
+    <Content Include="Content\image\net.png" />
+    <Content Include="Content\image\php.png" />
+    <Content Include="Content\image\play-button.png" />
+    <Content Include="Content\image\podium.png" />
+    <Content Include="Content\image\profile.png" />
+    <Content Include="Content\image\question.png" />
+    <Content Include="Content\image\regis.png" />
+    <Content Include="Content\image\registration.jpg" />
+    <Content Include="Content\image\result.png" />
+    <Content Include="Content\image\samsung.png" />
+    <Content Include="Content\image\slider.jpeg" />
+    <Content Include="Content\image\slider1.jpg" />
+    <Content Include="Content\image\slider3.jpg" />
+    <Content Include="Content\image\smartphone.png" />
+    <Content Include="Content\image\task.png" />
+    <Content Include="Content\image\img4.jpg" />
+    <Content Include="Content\image\taskpic.png" />
+    <Content Include="Content\image\taskpic2.jpg" />
+    <Content Include="Content\image\teacher.jpeg" />
+    <Content Include="Content\image\teacher1.jpeg" />
+    <Content Include="Content\image\teacher2.jpeg" />
+    <Content Include="Content\image\teacher3.jpeg" />
+    <Content Include="Content\image\teacher5.jpeg" />
+    <Content Include="Content\image\teacher6.jpg" />
+    <Content Include="Content\image\teacher7.jpg" />
+    <Content Include="Content\image\teacher8.jpg" />
+    <Content Include="Content\image\teacher9.jpg" />
+    <Content Include="Content\image\twitter.png" />
+    <Content Include="Content\image\video-marketing.png" />
+    <Content Include="Content\image\video.png" />
+    <Content Include="Content\image\youtube.png" />
+    <Content Include="Content\js\bootstrap.bundle.js" />
+    <Content Include="Content\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\js\bootstrap.esm.js" />
+    <Content Include="Content\js\bootstrap.esm.min.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\js\bootstrap.esm.js.map" />
+    <Content Include="Content\js\bootstrap.esm.min.js.map" />
+    <Content Include="Content\js\bootstrap.js.map" />
+    <Content Include="Content\js\bootstrap.min.js.map" />
+    <Content Include="Content\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\webfonts\fa-solid-900.woff2" />
+    <Content Include="Content\webfonts\fa-v4compatibility.ttf" />
+    <Content Include="Content\webfonts\fa-v4compatibility.woff2" />
+    <Content Include="Content\images\05d708653beff580.webp" />
+    <Content Include="Content\images\dff3f7adcf3a90c6.webp" />
+    <Content Include="Content\images\eye6.webp" />
+    <Content Include="Content\images\f4.webp" />
+    <Content Include="Content\images\f6.webp" />
+    <Content Include="Content\images\f7.webp" />
+    <Content Include="Content\images\flipkart1.webp" />
+    <Content Include="Content\images\flipkart10.webp" />
+    <Content Include="Content\images\flipkart11.webp" />
+    <Content Include="Content\images\flipkart2.webp" />
+    <Content Include="Content\images\flipkart3.webp" />
+    <Content Include="Content\images\flipkart4.webp" />
+    <Content Include="Content\images\flipkart5.webp" />
+    <Content Include="Content\images\flipkart6.webp" />
+    <Content Include="Content\images\flipkart7.webp" />
+    <Content Include="Content\images\flipkart8.webp" />
+    <Content Include="Content\images\flipkart9.webp" />
+    <Content Include="Content\images\gown2.webp" />
+    <Content Include="Content\images\gown3.webp" />
+    <Content Include="Content\images\hair3.webp" />
+    <Content Include="Content\images\home1.webp" />
+    <Content Include="Content\images\product6.webp" />
+    <Content Include="Content\image\slider2.webp" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_General.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Batches.cshtml" />
+    <Content Include="Views\Home\Faculty.cshtml" />
+    <Content Include="Views\Home\Success.cshtml" />
+    <Content Include="Views\Home\Registration.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Shared\_Admin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Category.cshtml" />
+    <Content Include="Views\Admin\AddBatch.cshtml" />
+    <Content Include="Views\Admin\AddAssignment.cshtml" />
+    <Content Include="Views\Admin\AddVideo.cshtml" />
+    <Content Include="Views\Home\AdminLogin.cshtml" />
+    <Content Include="Views\Admin\ChangePassword.cshtml" />
+    <Content Include="Views\Admin\StudentManagement.cshtml" />
+    <Content Include="Views\Admin\EnquiryManagement.cshtml" />
+    <Content Include="Views\Admin\SubmittedTaskManagement.cshtml" />
+    <Content Include="Views\Admin\ClassLink.cshtml" />
+    <Content Include="Views\Admin\SuccessStory.cshtml" />
+    <Content Include="Views\Shared\_student.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\Assignment.cshtml" />
+    <Content Include="Views\Student\Lecture.cshtml" />
+    <Content Include="Views\Student\UploadedAssignment.cshtml" />
+    <Content Include="Views\Student\MyProfile.cshtml" />
+    <Content Include="Views\Student\ChangePassword.cshtml" />
+    <Content Include="Views\Student\Videos.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\answerfile\" />
+    <Folder Include="Content\batchpic\" />
+    <Folder Include="Content\caticons\" />
+    <Folder Include="Content\logo\" />
+    <Folder Include="Content\spic\" />
+    <Folder Include="Content\taskpic\" />
+    <Folder Include="Content\videopic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63540</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44351/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

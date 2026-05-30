@@ -1,0 +1,9 @@
+<html>
+<head></head>
+<body>
+Name<br/> <input type = "text"/><br/>
+Gender <input type="radio" checked name ="a"/>
+ male 
+<input type="radio" name="a"/>
+female
+<br/>

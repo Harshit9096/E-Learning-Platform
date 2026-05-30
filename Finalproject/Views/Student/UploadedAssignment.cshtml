@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "UploadedAssignment";
+    Layout = "~/Views/Shared/_student.cshtml";
+}
+
+<h2>UploadedAssignment</h2>
+
+
+<table>
+    <thead>
+    <tr>
+        <th scope="col">Sr</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Task Name</th>
+        <th scope="col">Download Answer file</th>
+        <th scope="col">marking</th>
+
+    </tr>
+    </thead>
+    <tbody>
+        @{
+            if (ViewBag.ans != null)
+            {
+                foreach (var a in ViewBag.ans.Rows)
+                {
+                    <tr>
+                        <td>1</td>
+                        <td>@a[0]</td>
+                        <td>@a[1]</td>
+                        <td><a href="/admin/ "><i class="fa fa-download"></i></a></td>
+                        <td>
+
+                            <form method="post" action="/admin/marking">
+                                <input type="hidden" name="ansid" value="@a[3]" />
+                                Max Marks:
+                                <input type="number" value="@a[5]" name="maxmarks" />
+                                Obtain Marks:
+                                <input type="number" value="@a[4]"  name="obtainmarks" />
+                                <input type="submit" value="Assign" />
+
+
+
+                            </form>
+                        </td>
+                    </tr>
+
+                }
+            }
+        }
+
+    </tbody>
+</table>

@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/all.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+
+    <style>
+
+        :root {
+            --bgcolor: #262626;
+            --txtcolor: linear-gradient( 45deg, #b2ff59, #2e7d32 );
+            --tcolor: #b2ff59;
+            --hfcolor: #81B441;
+        }
+
+        .bg-mycolor {
+            background: var(--bgcolor);
+        }
+
+      
+        .t-color{
+            color: var(--tcolor);
+        }
+
+        .h-color {
+            color: var(--hfcolor);
+        }
+
+        .head-color {
+            background: var(--txtcolor);
+        }
+
+        #menu {
+            background: transparent !important;
+            margin-left: 90px;
+        }
+
+            #menu ul li a {
+                color: white;
+                padding-left: 25px;
+            }
+
+            #menu ul li {
+                margin-right: 20px;
+            }
+
+        .ufooter {
+            min-height: 320px;
+        }
+
+        .bfooter {
+            min-height: 80px;
+        }
+
+        .b {
+            padding-right:2px;
+            transition: 1s all;
+
+        }
+
+            .b:hover {
+                color: #b2ff59;
+                background:black;
+                transform: rotate(360deg);
+            }
+    </style>
+</head>
+<body>
+
+
+   @* <div class="row t1 head-color text-dark text-center" style="height:30px;">
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center">
+            <p>
+                <i class="fa-solid fa-phone  ps-5 "></i>
+                <b> +91-9931234940 || +91-6201588173 </b>
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+            <i class="fa-solid fa-envelope"></i>
+            <b>  bossberry@boss.in </b>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+            <b>Welcome To Boss Berry Learning </b>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <b class="">
+
+                <i class="fa-brands fa-square-facebook b  fs-5"></i>
+                <i class="fa-brands fa-square-twitter b  fs-5"></i>
+                <i class="fa-brands fa-square-whatsapp b fs-5"></i>
+                <i class="fa-brands fa-square-instagram b fs-5"></i>
+                <i class="fa-brands fa-linkedin b fs-5"></i>
+                <i class="fa-brands fa-github b fs-5"></i>
+
+
+            </b>
+        </div>
+
+    </div>*@
+
+
+    <div class="row t2  bg-mycolor">
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="col-sm-4 col-md-6 fs-3 mt-1">
+                    <span style="margin-left: 10px; border-left: 4px solid #b2ff59; " class="t-color ps-1">BossBerry</span> <b class="text-light">  Learning <i class="fa-solid fa-book-open-reader"></i></b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row t3 bg-mycolor">
+        <div class="col-sm-10 mx-auto ps-5">
+            <!--start nav-->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary " id="menu">
+                <div class="container-fluid">
+                    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ps-5">
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="/home/Index"><i class="fa-solid fa-house ps-1"></i>&nbsp;Home </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/About"><i class="fa-solid fa-circle-info "></i>&nbsp;About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/Batches"> <i class="fa-solid fa-book"></i>&nbsp;New Batches</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/faculty"><i class="fa-solid fa-handshake"></i>&nbsp;Our Faculty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/Success"><i class="fa-solid fa-user-graduate"></i>&nbsp;Success Stories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/Registration"><i class="fa-solid fa-users"></i>&nbsp;Registration</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/Login"><i class="fa-solid fa-user-plus"></i>&nbsp;Login</a>
+                            </li>
+                            <!--  <li class="nav-item">
+                                  <a class="nav-link disabled" aria-disabled="true">
+
+                                      <img src="~/Content/image/default.png" class="img-thumbnail" style="max-height:20px; " />Defult User
+                                  </a>
+                              </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!--End nav-->
+        </div>
+    </div>
+
+
+
+
+
+    @RenderBody()
+
+
+
+    <div class="row ufooter bg-mycolor">
+
+
+        <div class="col-lg-3 col-md-6 col-sm-12 fs-4 mt-5">
+
+            <span class="t-color" style="margin-left: 70px; border-left: 4px solid #81B441;">
+                &nbsp;BossBerry
+            </span> <b class="text-light">Learning <i class="fa-solid fa-book-open-reader"></i></b>
+            <p class="text-light" style="font-size: 16px; margin-top: 20px ; margin-left:70px;">BossBerry Learning Is A Learning Plateform Where You Can Easily Access The Populer Books Ebooks.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mt-5 fs-5">
+            @*<p style="color: white; margin-left: 80px; padding-bottom:5px; border-bottom: 2px solid #81B441">USEFUL LINKS</p>*@
+            <div style="color:white;margin-left:30px; padding-bottom:5px;">
+                USEFUL LINK
+                <div style="background-color:dimgrey;height:3px;">
+                    <div style="background-color: #b2ff59; height: 3px; width: 35%; "></div>
+                </div>
+            </div>
+
+
+            <div style="margin-top:12px;margin-left:37px; ">
+                <a href="/home/index" style="text-decoration: none; color:white; font-size:18px;">
+                    Home
+                    <div style="height:1px; background-color:dimgray; margin-top:8px;"></div>
+                </a>
+
+            </div>
+
+
+
+            <div style="margin-top:9px;margin-left:37px; ">
+                <a href="/home/About" style="text-decoration: none; color: white; font-size: 18px; ">
+                    About
+                    <div style="height:1px; background-color:dimgray; margin-top:8px;"></div>
+                </a>
+
+            </div>
+            <div style="margin-top:9px;margin-left:37px; ">
+                <a href="/home/Faculty" style="text-decoration: none; color: white; font-size: 18px;">
+                    Faculty
+                    <div style="height:1px; background-color:dimgray; margin-top:8px;"></div>
+                </a>
+
+            </div>
+
+            <div style="margin-top:9px;margin-left:37px; ">
+                <a href="/home/registration" style="text-decoration: none; color: white; font-size: 18px;">
+                    Registration
+                    <div style="height:1px; background-color:dimgray; margin-top:8px;"></div>
+                </a> 
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mt-5 fs-5">
+            <!--   <p style="color: white; margin-left: 30px; padding-bottom: 5px; border-bottom: 2px solid #81B441">OUR SOCIAL SITES</p> -->
+
+            <div style="color: white; margin-left: 30px; padding-bottom: 5px;">
+                OUR SOCIAL SITES
+                <div style="background-color:dimgrey; height:3px">
+                    <div style="background-color: #b2ff59; height: 3px; width: 35% "></div>
+                </div>
+
+            </div>
+            <b class="fs-2 text-light ms-5 ps-1">
+
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter  ps-2"></i>
+                <i class="fa-brands fa-square-whatsapp ps-2"></i>
+                <i class="fa-brands fa-square-instagram ps-2"></i>
+                <i class="fa-brands fa-linkedin ps-2"></i>
+                <i class="fa-brands fa-github ps-2"></i>
+
+
+            </b>
+
+            <div style="font-size:15px; padding-top:10px; color:white;">
+
+                <p><i class="fa-solid fa-envelope ps-5 text-warning "></i> &nbsp; bossberry@boss.in </p>
+                <p>
+                    <i class="fa-solid fa-phone p ps-5 text-warning"></i>
+                    <span> +91-9931234940</span>
+                    <br />
+                    <i class="fa-solid fa-phone p ps-5 text-warning"></i>
+                    <span>+91-6201588173</span>
+                </p>
+            </div>
+
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mt-5 fs-5 text-light">
+
+            @*<p style="color: white; margin-left:30px; padding-bottom:5px; border-bottom: 2px solid #81B441">CONTACT US</p>*@
+            <div style="color:white;margin-left:30px; padding-bottom:5px;">
+                CONTACT US
+                <div style="background-color:dimgrey;height:3px;">
+                    <div style="background-color: #b2ff59; height: 3px; width: 35%; "></div>
+                </div>
+            </div>
+
+            <p><i class="fa-solid fa-home ps-5 text-warning" style="font-size:17px;"></i> Greater Noida</p>
+            <iframe src="https://maps.google.com/maps?q=galgotia+college+of+engineering+and+technology&t=&z=13&ie=UTF8&iwloc=&output=embed" width="310" height="150" style="border:0; margin-left:40px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            <div style="margin-top:9px;margin-left:37px; ">
+                <a href="/home/adminlogin" style="text-decoration: none; color: white; font-size: 16px;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Admin Login
+                    <div style="height:1px; background-color:dimgray; margin-top:8px;"></div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row bfooter  bg-dark">
+        <div class="col-sm-4 text-center text-light" style="margin-left:490px; margin-top:17px; font-size:14px;"><i class="fa-regular fa-copyright"></i>&nbsp; Copyright <b>BossBerry Learning . </b> All Rights Resereved <br /> Designed by <b>Pallavi Priyakar</b> </div>
+    </div>
+
+    <script src="~/Content/js/bootstrap.bundle.js"></script>
+</body>
+</html>

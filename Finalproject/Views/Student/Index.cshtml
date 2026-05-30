@@ -1,0 +1,254 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_student.cshtml";
+}
+
+<style>
+
+    :root {
+        --bgcolor: #262626;
+        --txtcolor: linear-gradient( 45deg, #b2ff59, #2e7d32 );
+        --tcolor: #b2ff59;
+        --hfcolor: #81B441;
+    }
+
+    .bg-mycolor {
+        background: var(--bgcolor);
+    }
+
+
+    .t-color {
+        color: var(--tcolor);
+    }
+
+    .h-color {
+        color: var(--hfcolor);
+    }
+
+    .head-color {
+        background: var(--txtcolor);
+    }
+</style>
+
+<div class="container">
+    <div class="row t1">
+
+        <div class="text-center fs-2">Dashboard <b style="color: #81B441">     <img src="~/Content/image/layout.png" style="height:30px;width:30px; " /></b></div>
+
+        <div class="col-sm-2 mt-5">
+            <div class="card bg-light" style="height:200px; width:200px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/profile.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Upload your Profile</b> </h6>
+
+
+                </div>
+            </div>
+
+
+            <div class="card bg-light" style="height:200px; width:200px; margin-top:20px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/download.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Download Software</b> </h6>
+
+
+                </div>
+            </div>
+
+
+            <div class="card bg-light" style="height:200px; width:200px; margin-top:20px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/download.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Download Software</b> </h6>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2 mt-5">
+            <div class="card bg-light" style="height:200px; width:200px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/video-marketing.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Video & Task</b> </h6>
+
+
+                </div>
+            </div>
+
+            <div class="card bg-light" style="height:200px; width:200px; margin-top:20px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/clipboard.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Online Task</b> </h6>
+
+
+                </div>
+            </div>
+
+            <div class="card bg-light" style="height:200px; width:200px; margin-top:20px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/video-marketing.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Video & Task</b> </h6>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2 mt-5">
+            <div class="card bg-light" style="height:200px; width:200px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/task.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Today's Task</b> </h6>
+
+
+                </div>
+            </div>
+
+
+            <div class="card bg-light" style="height:200px; width:200px; margin-top:20px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/result.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Task Result</b> </h6>
+
+
+                </div>
+            </div>
+
+            <div class="card bg-light" style="height:200px; width:200px; margin-top:20px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/task.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Today's Task</b> </h6>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-2 mt-5">
+            <div class="card bg-light" style="height:200px; width:200px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/download-pdf.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>PDF Notes</b> </h6>
+
+
+                </div>
+            </div>
+
+            <div class="card bg-light" style="height:200px; width:200px;margin-top:20px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/chat.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Star Feedback</b> </h6>
+
+
+                </div>
+            </div>
+
+            <div class="card bg-light" style="height:200px; width:200px; margin-top:20px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/download-pdf.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>PDF Notes</b> </h6>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2 mt-5">
+            <div class="card bg-light" style="height:200px; width:200px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/money.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Pay remaining Fee</b> </h6>
+
+
+                </div>
+            </div>
+
+
+            <div class="card bg-light" style="height:200px; width:200px; margin-top:20px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/question.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Help</b> </h6>
+
+
+                </div>
+            </div>
+
+            <div class="card bg-light" style="height:200px; width:200px; margin-top:20px;">
+                <div class="card-body text-center">
+                    <img src="~/Content/image/money.png" style="height:50px;width:50px; border-radius:50%; margin-top:10px;" />
+                    <h6 class="card-title mt-5"><b>Pay remaining Fee</b> </h6>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-sm-2">
+            @{
+                if (ViewBag.link != null)
+                {
+                    if (ViewBag.link.Rows.Count > 0)
+                    {
+
+
+
+                        <div class="card" style=" height:400px;width:300px;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><b>Live Streaming</b></h5>
+                                <hr />
+                                <img src="~/Content/image/smartphone.png" style="height:60px;width:60px; margin-top:7px;margin-bottom:8px;" />
+                                <p class="card-text mt-3"><b>Your Main Batch Class Time</b></p>
+                                <input type="button" value="Click to join Class" class="btn btn-outline-success" style="background: #81B441;color:white;width:220px; border-radius:20px; " />
+                                <h6 class="card-subtitle mt-3 mb-2 text-body-secondary"><b>Class Timing :@ViewBag.link.Rows[0][4] - @ViewBag.link.Rows[0][5]</b></h6>
+
+                                <h6 class="card-subtitle mt-1 mb-2 text-body-secondary">Added On :@ViewBag.link.Rows[0][3] <br /></h6>
+                                <h6 class="card-subtitle mt-1 mb-2 text-body-secondary">Note : @ViewBag.link.Rows[0][6]</h6>
+                            </div>
+                        </div>
+
+
+                    }
+                }
+            }
+
+
+
+
+            <div class="card" style=" height:350px;width:300px; margin-top:15px;">
+                <div class="card-body text-center">
+
+                    <img src="~/Content/image/121.jpg" style="height:60px;width:60px; margin-top:7px;margin-bottom:8px;" />
+                    <p class="card-text mt-3"><b>Pallavi Priyakar <i class="fa-regular fa-circle-check text-info"></i></b></p>
+
+
+
+                    <h6 class="card-subtitle mt-1 mb-2 text-body-secondary">Diploma(C.S)-Second<br /></h6>
+
+
+                    <p>
+                        <img src="~/Content/image/facebook.png" style="height:30px; width:30px; margin-top:18px;" />
+                        <img src="~/Content/image/twitter.png" style="height:30px; width:30px; margin-top:18px;" />
+                        <img src="~/Content/image/linkedin.png" style="height:30px; width:30px; margin-top:18px;" />
+                        <img src="~/Content/image/youtube.png" style="height:30px; width:30px; margin-top:18px;" />
+
+                    </p>
+
+                    <h6 class="card-subtitle mt-1 mb-2 text-body-secondary"><b>fee </b>: 0 <b>Sumitted </b>: 0</h6>
+                    <h6 class="card-text mt-1"><b>Go To Profile</b></h6>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+

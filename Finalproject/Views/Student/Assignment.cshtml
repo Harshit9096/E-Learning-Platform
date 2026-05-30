@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "Assignment";
+    Layout = "~/Views/Shared/_student.cshtml";
+}
+
+<head>
+    <style>
+
+        .card {
+            box-shadow: 0px 0px 10px 10px rgba(5, 53, 53, .1), 0px 0px 30px 20px rgb(113, 108, 108,.3);
+        }
+    </style>
+</head>
+
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 mx-auto">
+
+
+            <h3 class="text-center mb-3">
+                YOUR <b class="h-color">ASSIGNMENT </b>
+                <img src="~/Content/image/clipboard.png" style="height:35px;width:35px; " />
+            </h3>
+            <hr />
+
+            @{
+                if (ViewBag.task != null)
+                {
+                    if (ViewBag.task.Rows.Count > 0)
+                    {
+                        foreach (var t in ViewBag.task.Rows)
+                        {
+
+
+
+
+                            <div class="container">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        Addded on : @t[6]
+                                        Assigned By : @t[5]
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">@t[2]</h5>
+                                        <p class="card-text">@t[3]</p>
+                                        <a href="~/Content/image/@t[4]" target="_blank" class="btn btn-outline-success text-dark" style="background: #81B441">Download The Task</a>
+
+                                    </div>
+                                    <div class="card-footer text-body-secondary">
+                                        @if (t[7].ToString().Equals(null) || t[7].ToString() == "")
+                                        {
+
+
+
+
+                                            <form method="post" enctype="multipart/form-data">
+                                                <input type="hidden" name="tid" value="@t[0]" required />
+                                                <input type="file" name="tfile" required  />
+                                                <input type="submit" class="btn btn-success text-dark" style="background: #81B441" value="Submit task" />
+
+                                            </form>
+                                        }
+
+                                        <span class="text-success"> NOTE : Please prepare one file of task in .pdf or .word format , and submit on click of upload button.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+
+
+
+                        }
+                    }
+                    else
+                    {
+
+                        <center>
+                            <div class="alert alert-success d-flex align-items-center" role="alert">
+                                <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill" /></svg>
+                                <div>
+                                    No Task is assigned to you by Admin till Now. Please wait for the task.
+                                </div>
+                            </div>
+                        </center>
+
+
+                        <br />
+                    }
+                }
+            }
+
+        </div>
+    </div>
+</div>

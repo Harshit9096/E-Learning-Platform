@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "SuccessStory";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+<head>
+    <style>
+
+        .card {
+            box-shadow: 0px 0px 10px 10px rgba(5, 53, 53, .1), 0px 0px 30px 20px rgb(113, 108, 108,.3);
+        }
+    </style>
+</head>
+
+<h2 class=" text-center" >SUCCESS <span style="color: #81B441; margin-top:30px;" >STORY</span></h2>
+<div class="row mx-auto">
+    <div class="col-sm-8 card mx-auto" style="margin-top:50px;">
+        <div class="card-body">
+
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group mt-3 text-center">
+                    <label for="exampleInputEmail1"><b>NAME OF STUDENT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COLLEGE OF STUDENT</b></label><br />
+                    <input type="text" required name="name" style="width:400px; height:40px; margin-right:30px; margin-top:7px;" />
+
+                    <input type="text" required name="college" style="width:400px; height:40px; margin-left:30px; margin-top:7px;" />
+                </div>
+
+
+                <div class="form-group mt-3 text-center">
+                    <label for="exampleInputEmail1"><b>COURSE OF STUDENT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMPANY OF STUDENT</b></label><br />
+                    <input type="text" required name="course" style="width:400px; height:40px; margin-right:30px; margin-top:7px;" />
+
+                    <input type="text" required name="company" style="width:400px; height:40px; margin-left:30px; margin-top:7px;" />
+                </div>
+
+                <div class="form-group mt-3 text-center">
+                    <label for="exampleInputEmail1"><b>POST OF STUDENT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FIELD OF STUDENT</b></label><br />
+                    <input type="text" required name="post" style="width:400px; height:40px; margin-right:30px; margin-top:7px;" />
+
+                    <input type="text" required name="field" style="width:400px; height:40px; margin-left:30px; margin-top:7px;" />
+                </div>
+
+                <div class="form-group mt-3 text-center">
+                    <label for="exampleInputEmail1"><b>PACKAGE OF STUDENT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMPANY LOGO</b></label><br />
+                    <input type="text" required name="package" style="width:400px; height:40px; margin-right:30px; margin-top:7px;" />
+
+                    <input type="file" required name="logo" style="width:400px; height:40px; margin-left:30px; margin-top:7px;" />
+                </div>
+
+
+                <label for="exampleInputEmail1" style="margin-left:180px;"><b>STUDENT PICTURE</b></label><br />
+
+                <input type="file" required name="spic" class="mt-3" style="margin-left:50px;" />
+
+
+
+
+
+                <input class="btn btn-success mt-4" type="submit" style="background: #81B441; width:100%;" value="ADD NOW" />
+
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+
+<div class="row">
+    <div class="col-sm-12 card text-center">
+
+
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>S No.</th>
+                        <th>Student_name</th>
+                        <th>College_name</th>
+                        <th>Course</th>
+                        <th>Company</th>
+                        <th>Post</th>
+                        <th>Field</th>
+                        <th>Package</th>
+                        <th>Logo</th>
+                        <th>Picture</th>
+                        <th>Added on</th>
+                        <th>Action</th>
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+
+                        if (ViewBag.successstory != null)
+                        {
+                            foreach (var row in ViewBag.successstory.Rows)
+                            {
+                                        <tr>
+                                            <td>@row[0]</td>
+                                            <td>@row[1]</td>
+                                            <td>@row[2]</td>
+                                            <td>@row[3]</td>
+                                            <td>@row[4]</td>
+                                            <td>@row[5]</td>
+                                            <td>@row[6]</td>
+                                            <td>@row[7]</td>
+                                            <td> <img src="~/Content/logo/@row[8]" style="height:50px; width:50px;" /></td>
+                                           <td> <img src="~/Content/spic/@row[9]" style="height:50px; width:50px;" /></td>
+                                            @*<td><i class="fa fa-download"></i></td>
+        <td><i class="fa fa-download"></i></td>*@
+
+                                            <td>@row[10]</td>
+
+                                            <td><i class="fa fa-trash text-success"></i></td>
+
+                                        </tr>
+                                    }
+                                    }
+
+                                    }
+
+                            </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

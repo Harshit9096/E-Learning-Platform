@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "MyProfile";
+    Layout = "~/Views/Shared/_student.cshtml";
+}
+
+<style>
+    .a {
+        text-align: center;
+        margin-top: 50px;
+    }
+</style>
+
+
+
+<h2 class="a">&nbsp;MY <b class="h-color"> PROFILE</b> <img src="~/Content/image/human.png" style="height:45px; width:45px; text-align:center;" /></h2>
+
+<div class="container">
+    @{
+        if (ViewBag.profile != null)
+        {
+            if (ViewBag.profile.Rows.Count > 0)
+            {
+
+
+                <div class="row">
+                        <form method="post">
+                            <div class="card mb-3 p-5" style="">
+                                <div class="row g-0">
+                                    <div class="col-md-3">
+                                        <img src="~/Content/image/default.png" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                Name :<br />
+                                                <input type="text" name="name" required value="@ViewBag.profile.Rows[0][0]" class="form-control" />
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                Mobile No :<br />
+                                                <input type="number" name="mobno" required value="@ViewBag.profile.Rows[0][3]" class="form-control" />
+                                            </div>
+
+
+
+                                            <div class="col-sm-4">
+                                                College :<br />
+                                                <input type="text" name="college" required value="@ViewBag.profile.Rows[0][5]" class="form-control" />
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-2 mt-3">
+
+
+                                                    <input type="submit" class="btn btn-success" value="Update Profile" />
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+
+            }
+            else
+            {
+                <h2>Some problem in profile , please login again...</h2>
+            }
+        }
+    }
+</div>

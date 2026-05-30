@@ -1,0 +1,124 @@
+﻿ 
+@{
+    ViewBag.Title = "ClassLink";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<head>
+    <style>
+
+        .card {
+            box-shadow: 0px 0px 10px 10px rgba(5, 53, 53, .1), 0px 0px 30px 20px rgb(113, 108, 108,.3);
+        }
+    </style>
+</head>
+
+<style>
+    div{
+        text-align:center;
+    }
+</style>
+
+<div class="row p-5">
+    <div class="col-sm-4 card">
+        <div class="card-body">
+            <h4 class="card-title text-center" style="color: #81B441">CLASS LINK</h4>
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group mt-3">
+                    <label for="exampleInputEmail1"><b>CHOOSE BATCH</b></label>
+
+                    <select class="form-control mt-3" name="cbatch" aria-describedby="Category">
+                        <option value="0">Select Batch</option>
+                        @foreach (var row in ViewBag.batches.Rows)
+                        {
+                            <option value="@row[0]">@row[1]</option>
+                        }
+
+                    </select>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputEmail1"><b>CLASS LINK</b></label>
+                    <input type="text" name="link" class="form-control" aria-describedby="Category" placeholder="Enter class link" />
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputEmail1"><b>DATE OF CLASS LINK</b></label>
+                    <input type="date" name="date" class="form-control" id="batchedate" aria-describedby="Category" placeholder="Date" />
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputEmail1"><b>START TIME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; END TIME</b></label><br />
+                    <input type="time" name="stime" style="width:190px; margin-right:14px;" />
+
+
+
+                    <input type="time" name="etime" style="width:190px; margin-left:12px;" />
+
+                </div>
+
+
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputEmail1"><b>MESSAGE </b></label>
+                    <textarea class="form-control" name="message" aria-describedby="Category" style="height:80px;"></textarea>
+                </div>
+
+                <input class="btn btn-success mt-4" type="submit" style="background: #81B441; width:100%;" value="ADD NOW" />
+            </form>
+        </div>
+    </div>
+
+
+    <div class="col-sm-7  card text-center ms-5">
+
+
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>S No.</th>
+                        <th>B_Name</th>
+                        <th>C_Link</th>
+                        <th> Date</th>
+                        <th>S_Time</th>
+                        <th>E_time</th>
+                        <th>Message</th>
+                        <th>Action</th>
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        if (ViewBag.classlink != null)
+                        {
+                            foreach (var row in ViewBag.classlink.Rows)
+                            {
+                                        <tr>
+                                            <td>@row[0]</td>
+                                            <td>@row[1]</td>
+                                            <td>@row[2]</td>
+                                            <td>@row[3]</td>
+                                            <td>@row[4]</td>
+                                            <td>@row[5]</td>
+                                            <td>@row[6]</td>
+                                            <td><i class="fa fa-trash text-success"></i></td>
+                                        </tr>
+
+                                    
+                                       }
+
+                                          }
+
+                                              }
+                            </tbody>
+                </table>
+            </div>
+    
+    </div>
+
+
+  </div>
+
